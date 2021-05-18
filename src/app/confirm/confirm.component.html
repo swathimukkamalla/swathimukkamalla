@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="row">
+      <div class="col-lg-2">
+        <ul class="nav" class="example" style="border-right: 1px solid rgba(255,255,255,0.178);">
+         <div class="col-lg-11 mt-4 bg-success">
+            <li class="navbar-brand mt-4 ">
+                <h5 class="text-white"><b class="hi"><u>Movie Ticket Booking</u></b></h5>
+               </li>
+         </div>
+         <li class="nav-item   "> 
+            <a class="nav-link" routerLink="" routerLinkActive="active">
+              <i class="fa fa-home movie"></i>
+             <b class="movie"> Dashboard</b></a>
+          </li>
+          <li class="nav-item active ">
+           
+            <a class="nav-link " routerLink="/conform/first" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}> 
+              <i class="fa fa-home movie"></i>
+              <b class="movie"> Movie Ticket Booking Form</b></a>
+          </li>
+          
+          <li class="nav-item   "> 
+            <a class="nav-link" routerLink="/conform/table" routerLinkActive="active">
+               <i class="fa fa-table movie" aria-hidden="true"></i>
+             <b class="movie">   View Movie Ticket Booking</b></a>
+          </li>
+          <li class="nav-item " class="logout">
+              <a class="nav-link" routerLink="/conform/first">
+                <i class="fa fa-sign-out movie"></i>
+                <b class="movie"> Logout</b></a>
+            </li>
+        </ul>
+      </div>
+      <div class="col-lg-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  

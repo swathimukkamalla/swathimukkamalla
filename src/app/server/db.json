@@ -1,0 +1,64 @@
+{
+  "employees": [
+    {
+      "firstName": "lakshmidevi",
+      "email": "lakshmi@gmail.com",
+      "lastName": "mukkamalla",
+      "mobileNumber": "1234567890",
+      "daily": "Daily Design Metting-Metting Room No.2",
+      "date": "2021-05-20",
+      "time": "9.00 Am to 10.00 Am",
+      "id": 22
+    },
+    {
+      "firstName": "suvarnnamma",
+      "email": "suvarna@gmail.com",
+      "lastName": "modulla",
+      "mobileNumber": "996385855555",
+      "daily": "Daily Design Metting-Metting Room No.1",
+      "date": "2021-05-25",
+      "time": "9.00 Am to 10.00 Am",
+      "id": 38
+    },
+    {
+      "firstName": "Shiva SankarM",
+      "email": "SANKAR@GMAIL.COM",
+      "lastName": "Modulla",
+      "mobileNumber": "9963567307",
+      "daily": "Daily Design Metting-Metting Room No.2",
+      "date": "2021-05-21",
+      "time": "8.00 Am to 9.00 Am",
+      "id": 40
+    },
+    {
+      "firstName": "Praneeth",
+      "email": "praneeth@gmail.com",
+      "lastName": "Mukkamalla",
+      "mobileNumber": "0123459876",
+      "daily": "Daily Design Metting-Metting Room No.1",
+      "date": "2021-05-06",
+      "time": "10.00 Am to 11.00 Am",
+      "id": 41
+    },
+    {
+      "firstName": "abcdef",
+      "email": "abcd@gmail.com",
+      "lastName": "abcd",
+      "mobileNumber": "1234567890",
+      "daily": "Daily Design Metting-Metting Room No.2",
+      "date": "2021-05-15",
+      "time": "10.00 Am to 11.00 Am",
+      "id": 42
+    },
+    {
+      "firstName": "swathi",
+      "email": "mukkamallaswathim@gmail.com",
+      "lastName": "mukkamalla",
+      "mobileNumber": "9963567307",
+      "daily": "Daily Design Metting-Metting Room No.2",
+      "date": "2021-05-21",
+      "time": "8.00 Am to 9.00 Am",
+      "id": 44
+    }
+  ]
+}

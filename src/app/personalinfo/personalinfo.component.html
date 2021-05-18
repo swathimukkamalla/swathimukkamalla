@@ -1,0 +1,62 @@
+<div class="container background mt-4 mb-4">
+        <h3 class="info"><b>Personal Information</b></h3>
+        <img src="assets/21-great-tube-hacks-that-change-absolutely-everything-20-1556691366-RvQV-column-width-inline.jpg"
+          alt="no img found" class="img-fluid one">
+        <form [formGroup]="regform" class="form1 mt-4">
+  
+          <div class="row ">
+            <div class="col-lg-3">
+              <label class="text1">First Name:</label>
+              <input type="text" name="firstName" formControlName="firstName" placeholder="First Name"
+                class="form-control" required >
+                <!-- [ngClass]="{'is-invalid':regform.controls.firstName.errors 
+                                          && regform.controls.firstName.touched}">
+              <div *ngIf="regform.controls.firstName.touched && regform.controls.firstName.errors " class="text-danger ">
+                <p *ngIf="regform.controls.firstName.errors?.required">This Field is Required</p>
+              </div> -->
+            </div>
+            <div class="col-lg-3">
+              <label class="text1">Last Name:</label>
+              <input type="text" name="lastName" formControlName="lastName" placeholder="Last Name" class="form-control"required>
+  
+                <!-- required [ngClass]="{'is-invalid':regform.controls.lastName.errors 
+                                        && regform.controls.lastName.touched}">
+  
+              <div *ngIf=" regform.controls.lastName.touched && regform.controls.lastName.errors " class="text-danger ">
+                <p *ngIf="regform.controls.lastName.errors?.required">This Field is Required</p>
+              </div> -->
+            </div>
+  
+            <div class="col-lg-3">
+              <label class="text1">Email:</label>
+              <input type="text" name="email" formControlName="email" placeholder="Example@gmail.com" class="form-control">
+  <!--             
+                required [ngClass]="{'is-invalid':regform.controls.email.errors 
+                                      && regform.controls.email.touched}">
+  
+              <div *ngIf=" regform.controls.email.touched && regform.controls.email.errors" class="text-danger ">
+                <p *ngIf="regform.controls.email.errors?.required">This Field is Required</p>
+              </div> -->
+            </div>
+  
+  
+  
+            <div class="col-lg-3">
+              <label class="text1">Mobile Number:</label>
+              <input type="text" name="mobileNumber" formControlName="mobileNumber" placeholder="mobileNumber"class="form-control">
+  
+                <!-- class="form-control" required [ngClass]="{'is-invalid':regform.controls.mobileNumber.touched 
+                              &&  regform.controls.mobileNumber.errors }">
+  
+              <div *ngIf="regform.controls.mobileNumber.errors && regform.controls.mobileNumber.touched"
+                class="text-danger ">
+                <p *ngIf="regform.controls.mobileNumber.errors?.required">This Field is Required</p>
+              </div> -->
+            </div>
+          </div>
+          <br>
+          <button type="button" class="btn btn-info next"(click)="onclick(regform.value)">Next</button>
+          <button type="submit"class="btn btn-info previous" (click)="updateData(regform.value)">update</button>
+        </form>
+      
+</div>

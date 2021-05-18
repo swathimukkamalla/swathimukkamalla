@@ -1,0 +1,276 @@
+<div class="container mt-3 background">
+  <div class="container"></div>
+   <h2 class="text-white mt-4 adjust"><b>Movie Ticket Booking Form</b></h2> 
+   <br>
+  <div class="row mt-2" id="tabs" #tabs>
+    <ul id="mytabs" class="nav nav-pills " role="tablist">
+      <div class="col-lg-4">
+        <p class="text2">1</p>
+        <li class="nav-item ">
+          <a class="nav-link nav1 active" data-toggle="tab" href="#search" [ngClass]="{ 'active':activeTab==='search'}"
+            (click)="search('search')">Personal Info</a>
+        </li>
+        
+      </div>
+       <div class="col-lg-4">
+        <p class="text22">2</p>
+        <li class="nav-item">
+          <a class="nav-link nav2 " data-toggle="tab" href="#results" [ngClass]="{ 'active':activeTab==='result'}"
+            data-toggle="tab" (click)="result('result')">Booking</a>
+        </li>
+      </div>
+      <div class="col-lg-4">
+        <p class="text21">3</p>
+
+        <li class="nav-item ">
+          <a class="nav-link nav3" data-toggle="tab" href="#confirmation" [ngClass]="{ 'active':activeTab==='confirm'}">
+            Confirm</a>
+        </li>
+      </div> 
+    </ul>
+  </div>
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="search" [ngClass]="{ 'active':activeTab==='search'}" class="container tab-pane"><br>
+      <h3 class="info"><b>Personal Details:-</b></h3>
+      
+      <form [formGroup]="regform" class="form1">
+
+        <div class="row any">
+          <div class="row">
+            <div class="col-lg-2">
+                <label class="tex9">First Name:</label>
+            </div>
+            <div class="col-lg-8 text">
+                <input type="text" name="firstName" [(ngModel)]="employeeData.firstName" formControlName="firstName"
+                placeholder="First Name"
+                 class="form-control" required [ngClass]="{'is-invalid':regform.controls.firstName.errors 
+                                           && regform.controls.firstName.touched}">
+                                         
+               <div *ngIf="regform.controls.firstName.touched && regform.controls.firstName.errors " class="text-danger ">
+                 <p *ngIf="regform.controls.firstName.errors?.required">This Field is Required</p>
+               </div> 
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-lg-2">
+                <label class="tex9">Last Name:</label>
+            </div>
+            <div class="col-lg-8 text">
+                <input type="text" name="lastName" [(ngModel)]="employeeData.lastName" formControlName="lastName" placeholder="Last Name" class="form-control"
+                required required [ngClass]="{'is-invalid':regform.controls.lastName.errors 
+                                        && regform.controls.lastName.touched}">
+  
+              <div *ngIf=" regform.controls.lastName.touched && regform.controls.lastName.errors " class="text-danger ">
+                <p *ngIf="regform.controls.lastName.errors?.required">This Field is Required</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-lg-2">
+                <label class="tex9">Email:</label>
+            </div>
+            <div class="col-lg-8 text">
+                <input type="text" name="email" [(ngModel)]="employeeData.email" formControlName="email" placeholder="Example@gmail.com" class="form-control"
+                required [ngClass]="{'is-invalid':regform.controls.email.errors 
+                                      && regform.controls.email.touched}">
+  
+              <div *ngIf=" regform.controls.email.touched && regform.controls.email.errors" class="text-danger ">
+                <p *ngIf="regform.controls.email.errors?.required">This Field is Required</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-lg-2">
+                <label class="tex9">Mobile Number:</label>
+            </div>
+            <div class="col-lg-8 text">
+                <input type="text" name="mobileNumber" [(ngModel)]="employeeData.mobileNumber" formControlName="mobileNumber" placeholder="Mobile Number"
+                class="form-control" class="form-control" required [ngClass]="{'is-invalid':regform.controls.mobileNumber.touched 
+                              &&  regform.controls.mobileNumber.errors }">
+  
+              <div *ngIf="regform.controls.mobileNumber.errors && regform.controls.mobileNumber.touched"
+                class="text-danger ">
+                <p *ngIf="regform.controls.mobileNumber.errors?.required">This Field is Required</p>
+              </div>
+            </div>
+          </div>
+        
+        <br>
+        <div>
+        </div>
+       <div class="row ">
+         <div class="col-lg-6">
+          
+         </div>
+         <div class="col-lg-6">
+         
+           <button type="button" class="btn backgroundcolor next1"(click)="search('result')">Next</button>
+        </div>
+       </div>
+      </div>
+      </form>
+    </div>
+    <br>
+
+
+    <div id="results" class="tab-pane container" [ngClass]="{ 'active':activeTab==='result'}">
+      
+      <h3 class="info1"><b>Booking Information</b></h3>
+      <img src="assets/21-great-tube-hacks-that-change-absolutely-everything-20-1556691366-RvQV-column-width-inline.jpg"
+        alt="no img found" class="img-fluid on">
+      <form [formGroup]="regform" class="form1 mt-2 mb-4">
+        <div class="row row1">
+         <div class="col-lg-12 text">
+            <label class="tex9">Choose a Room:</label>
+            <br>
+            <select class="t"[(ngModel)]="employeeData.daily" placeholder="Please Select Any One Field" formControlName="daily" required [ngClass]="{'is-invalid':regform.controls.daily.touched 
+            &&  regform.controls.daily.errors }">
+              <option></option>
+              <option>Daily Design Metting-Metting Room No.1</option>
+              <option>Daily Design Metting-Metting Room No.2</option>
+              <option>Daily Design Metting-Metting Room No.3</option>
+            </select>
+            <p class="borderr"></p>
+            <div *ngIf="regform.controls.daily.errors && regform.controls.daily.touched" class="text-danger ">
+              <p *ngIf="regform.controls.daily.errors?.required">This Field is Required</p>
+            </div>
+          </div>
+          <div class="col-lg-6 text tex ">
+            <br>
+            <label class="tex9">Organization Day:</label>
+            <br>
+            <input type="date" name="date" [(ngModel)]="employeeData.date" formControlName="date" placeholder="Daily" class="form-control " required
+              [ngClass]="{'is-invalid':regform.controls.date.errors 
+                                    && regform.controls.date.touched}">
+            <div *ngIf=" regform.controls.date.touched && regform.controls.date.errors" class="text-danger ">
+              <p *ngIf="regform.controls.date.errors?.required">This Field is Required</p>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <br>
+            <label class="tex9 text4">Time Zone:</label>
+            <br>
+            <select class="t" type="text"[(ngModel)]="employeeData.time" formControlName="time" required [ngClass]="{'is-invalid':regform.controls.time.touched 
+                        &&  regform.controls.time.errors }">
+              <option></option>
+              <option>8.00 Am to 9.00 Am</option>
+              <option>9.00 Am to 10.00 Am</option>
+              <option>10.00 Am to 11.00 Am</option>
+            </select>
+            <p class="borderr"></p>
+            <div *ngIf="regform.controls.time.errors && regform.controls.time.touched" class="text-danger ">
+              <p *ngIf="regform.controls.time.errors?.required">This Field is Required</p>
+            </div>
+          </div>
+        </div>
+       <div class="row">
+         <div class="col-lg-6">
+            <button type="submit" class="btn backgroundcolor previous1" (click)="previous('search')">Previous</button>
+       
+         </div>
+         <div class="col-lg-6"> <button type="submit" class="btn backgroundcolor1 nextt" (click)="search1('confirm')">Next</button></div>
+       </div>
+      </form>
+    </div>
+
+
+    <div class="tab-pane container " id="confirmation" [ngClass]="{ 'active':activeTab==='confirm'}">
+
+    
+      
+      <div class="container topp">
+          <div class="row leftt"><h4 class="text-white"><u>Re-Check The Entered Details:</u></h4>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr"> First Name:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr"> {{employeeData.firstName}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Last Name:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr">{{employeeData.lastName}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Email:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr"> {{employeeData.email}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Mobile Number:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr">{{employeeData.mobileNumber}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Choose A Room:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr"> {{employeeData.daily}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Organization Day:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr">{{employeeData.date}}</p>
+              </div>
+
+           </div>
+           <div class="row">
+              <div class="col-lg-4 justify-content-center text-white">
+                  <p class="colorr">Time Zone:</p>
+              </div>
+              <div class="col-lg-4 text-white">
+                  <p class="colorr"> {{employeeData.time}}</p>
+              </div>
+
+           </div>
+          </div>
+        </div>
+        <div class="row alignn">
+          <div class="col-lg-4">
+             <button type="submit" class="btn backgroundcolor " (click)="previous('result')">Previous</button>
+          </div>
+          <div class="col-lg-4">
+           
+             <button type="submit" class="btn backgroundcolor conform " [disabled]="!regform.valid" (click)="onclick(regform.value)">Conform</button>
+          </div>
+          <div class="col-lg-4">
+            
+         <button type="submit" class="btn backgroundcolor update" (click)="updateData(regform.value)">Update</button>
+         
+          </div>
+        </div> 
+
+
+      </div>
+    </div> 
+  </div>

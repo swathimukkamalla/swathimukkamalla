@@ -1,0 +1,94 @@
+
+/* #1fd7ac */
+.background
+{
+    background-color:#433f6b;
+    opacity: 0.9;
+}
+.color
+{
+    background-color: cyan;
+}
+.background1
+{
+    background-color:white;
+}
+.one
+{
+    width: 100%;
+    height: 450px;
+
+}
+.color1{
+    color:white;
+}
+.one1{
+    position: relative;
+    right: -1210px;
+}
+.text1
+{color:#0aeed0;
+}
+
+/* .border1
+{
+    color: white;
+    border-bottom: 2px solid black;
+
+} */
+
+.borderlast
+{
+    border-bottom: 1px solid #ffffff45;
+}
+.borderlast1
+{
+    position: relative;
+    right: -1210px;
+}
+.next1
+{
+    position: relative;
+    left: 1120px;
+}
+.next
+{
+    position: relative;
+    left: 1180px
+}
+
+.one2{
+    color: white;
+    margin-left: 570px;
+}
+.info
+{
+    color: white;
+    position: relative;
+    top: -40px;
+}
+.text2
+{
+    background-color: #0aeed0;
+    padding: 15px;
+    margin-right: 270px;
+    margin-left: 51px;
+}
+.nav1{
+    color: black;
+    background: white;
+    position: relative;
+    top: -70px;
+    padding: 15px;
+    margin-right: 40px;
+    margin-left: 130px;
+   
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: black;
+    background-color: #ffff;
+}
+.btn backgroundcolor{
+    background-color: #0aeed0;
+}
